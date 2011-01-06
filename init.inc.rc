@@ -9,10 +9,8 @@ on init
 
     mount rootfs rootfs / ro remount
 
-    #
     # START from umount/re-mount data
-    # 
-    umount /data
+
     mount ext3 /dev/block/mmcblk0p1 /data  wait nosuid noatime nodiratime
     exec /system/bin/e2fsck -p /dev/block/mmcblk0p1
     chown system system /data
@@ -77,21 +75,12 @@ on init
 
     # change the mode for dmdata
     chmod 0777 /data/local/dmdata
-    #
-    # END umount/re-mount data
-    #
 
-    #mount yaffs2 mtd@datadata /data/data nosuid nodev
+  # END umount/re-mount data
+
+    mount yaffs2 mtd@datadata /data/data nosuid nodev
     chown system system /data/data
     chmod 0771 /data/data
-
-    #
-    # START umount/re-mount cache
-    #
-    umount /cache
-    mount ext3 /dev/block/mmcblk0p2 /cache wait nosuid nodev noatime nodiratime
-    chown system cache /cache
-    chmod 0771 /cache
 
     # This may have been created by the recovery system with odd permissions
     mkdir system system /cache/recovery
@@ -103,15 +92,22 @@ on init
     mkdir /cache/dalvik-cache 0771 system system
     chown system system /cache/dalvik-cache
     chmod 0771 /cache/dalvik-cache
-    #
-    # END umount/re-mount cache
-    #
-
+    
+  # END umount/re-mount cache
+    
 # Ramdisk related
     mount rootfs rootfs / remount
     mkdir /app-cache 01777 system system
     mount tmpfs tmpfs /app-cache size=8m
     mount rootfs rootfs / ro remount
+
+on fs
+    
+  # START umount/re-mount cache
+    umount /cache
+    mount ext3 /dev/block/mmcblk0p2 /cache wait nosuid nodev noatime nodiratime
+    chown system cache /cache
+    chmod 0771 /cache
 
 on boot
     mkdir /data/misc/wifi 0770 wifi wifi
