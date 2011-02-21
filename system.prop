@@ -46,7 +46,7 @@ ro.cdma.home.operator.alpha = Verizon
 # Disable HTC checkin service.
 ro.config.htc.nocheckin=1
 
-# Set Horizontal VVM = true and ro.HorizontalBUA = true for Incredible#C Verizon build
+# Set Horizontal VVM = false and ro.HorizontalBUA = true for Incredible#C Verizon build
 # Then Verizon VVM/BuA program can check this property to known if there is a Native VVM/BuA in ROM
 ro.HorizontalVVM = true
 ro.HorizontalBUA = true
