@@ -48,8 +48,8 @@ ro.config.htc.nocheckin=1
 
 # Set Horizontal VVM = false and ro.HorizontalBUA = true for Incredible#C Verizon build
 # Then Verizon VVM/BuA program can check this property to known if there is a Native VVM/BuA in ROM
-ro.HorizontalVVM = true
-ro.HorizontalBUA = true
+ro.HorizontalVVM = false
+ro.HorizontalBUA = false
 
 #Recognize different PRL and PCB ID to load different acoustic ACDB for Incredible_C
 ro.ril.enable.prl.recognition = 1
