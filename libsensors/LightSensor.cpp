@@ -143,8 +143,8 @@ int LightSensor::readEvents(sensors_event_t* data, int count)
 float LightSensor::indexToValue(size_t index) const
 {
     static const float luxValues[10] = {
-            10.0, 160.0, 225.0, 320.0, 640.0,
-            1280.0, 2600.0, 5800.0, 8000.0, 10240.0
+            1.0, 11.0, 16.0, 22.0, 75.0,
+            209.0, 362.0, 488.0, 560.0, 1023.0
     };
 
     const size_t maxIndex = sizeof(luxValues)/sizeof(*luxValues) - 1;
