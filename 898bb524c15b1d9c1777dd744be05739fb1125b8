@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAK3///vw\u003d",
+        "filename": "inc.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 23
+      },
+      "writtenOn": "2011-11-01T10:00:48Z",
+      "side": 0,
+      "message": "I think we do want clientidbase\u003dandroid-verizon, as the global default is android-google.",
+      "revId": "898bb524c15b1d9c1777dd744be05739fb1125b8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAK3///vo\u003d",
+        "filename": "system.prop",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 23
+      },
+      "writtenOn": "2011-11-01T10:00:48Z",
+      "side": 0,
+      "message": "This is overriding the global default false.",
+      "revId": "898bb524c15b1d9c1777dd744be05739fb1125b8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
